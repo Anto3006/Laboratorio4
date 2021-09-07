@@ -1,0 +1,27 @@
+﻿@using Laboratorio4.Models;
+
+@{
+    ViewBag.Title = "ListaPlanetas";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado de Planetas</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h1>Listado de Planetas</h1>
+    <div class="seccion_1" id="s1">
+        @foreach (PlanetaModel planeta in ViewBag.planetas)
+        {
+            <h2>Ficha del planeta @planeta.id</h2>
+            <ul>
+                <li>Nombre: @planeta.nombre</li>
+                <li>Tipo: @planeta.tipo</li>
+                <li>Número de anillos: @planeta.numeroAnillos</li>
+            </ul>
+        }
+    </div>
+</body>
+</html>
+
