@@ -20,8 +20,11 @@
                 <li>Tipo: @planeta.tipo</li>
                 <li>Número de anillos: @planeta.numeroAnillos</li>
             </ul>
+            @Html.ActionLink(   "Modificar información", "editarPlaneta", new { identificador = planeta.id },
+                                new { @class = "btn btn alert-info", 
+                                @onclick = "return confirm('¿Quiere modificar este planeta ? ');" })
         }
-    </div>
+        </div>
 </body>
 </html>
 
